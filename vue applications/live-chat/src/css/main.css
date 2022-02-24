@@ -1,0 +1,82 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol{
+  padding: 0;
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: rgba(128, 128, 128, 0.20);
+  
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+
+div.green{
+  width: 65rem;
+  height: 65rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -80px; left: -200px;
+  background-color: rgb(153, 240, 211);
+  
+}
+
+div.dark{
+  width: 45rem;
+  height: 45rem;
+  border-radius: 50%;
+  background-color: black;
+  position: fixed;
+  top: -80px;
+  right: -180px;
+
+}
