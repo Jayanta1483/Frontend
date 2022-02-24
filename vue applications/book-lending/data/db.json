@@ -1,0 +1,54 @@
+{
+  "books": [
+    {
+      "title": "Wings of Fire",
+      "details": {
+        "author": "A P J Abdul Kalam",
+        "genre": "Non Fiction - Autobiography",
+        "about": "Wings of Fire: An Autobiography of APJ Abdul Kalam, former President of India. It was written by Dr. Abdul Kalam and Arun Tiwari. Dr. Kalam examines his early life, effort, hardship, fortitude, luck and chance that eventually led him to lead Indian space research, nuclear and missile programs."
+      },
+      "available": true,
+      "id": 1
+    },
+    {
+      "title": "Aranyak",
+      "details": {
+        "author": "Bibhutibhushan Bandyopadhyay",
+        "genre": "Fiction - Novel",
+        "about": "Aranyak composed between 1937 and 1939 and published in 1976, is a Bengali-language novel by Bibhutibhushan Bandopadhyay, based on his long and arduous years in northern Bihar, mainly in the districts of Purnea and Bhagalpur."
+      },
+      "available": true,
+      "id": 2
+    },
+    {
+      "title": "A Brief History of Time",
+      "details": {
+        "author": "Stephen Hawking",
+        "genre": "Non Fiction -- Science",
+        "about": "A Brief History of Time: From the Big Bang to Black Holes is a book on theoretical cosmology by English physicist Stephen Hawking."
+      },
+      "available": false,
+      "id": 3
+    },
+    {
+      "title": "Twenty Thousand Leagues Under the Sea",
+      "details": {
+        "author": "Jules Verne",
+        "genre": "Adventure",
+        "about": "Twenty Thousand Leagues Under the Seas is a classic science fiction adventure novel by French writer Jules Verne."
+      },
+      "available": true,
+      "id": 4
+    },
+    {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "details": {
+        "author": "J. K. Rowling",
+        "genre": "Fantasy - Novel",
+        "about": "Harry Potter and the Philosopher's Stone is a fantasy novel written by British author J. K. Rowling."
+      },
+      "available": false,
+      "id": 5
+    }
+  ]
+}
