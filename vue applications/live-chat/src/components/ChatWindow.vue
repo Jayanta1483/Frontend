@@ -1,13 +1,13 @@
 <template>
   <div class="header"></div>
   <div class="chat-window" ref="chatWindow">
-    <div class="msg-background">
-      <div
-        v-for="(msg, index) in formatedMsgs"
-        :key="index"
-        :class="[msg.uid == user.uid ? 'active' : 'non-active']"
-        class="single-msg"
-      >
+    <div
+      v-for="(msg, index) in formatedMsgs"
+      :key="index"
+      :class="[msg.uid == user.uid ? 'active' : 'non-active']"
+      class="single-msg"
+    >
+      <div>
         <div v-if="msg.uid !== user.uid">
           <span class="o-name">{{ msg.name }}</span>
           <p>{{ msg.message }}</p>
@@ -29,27 +29,25 @@ import { computed, onUpdated, watchEffect } from "@vue/runtime-core";
 import { useShowMessages } from "../composables/useShowMessages";
 import { auth } from "../firebase/config";
 import { formatDistanceToNow } from "date-fns";
-import useSound from 'vue-use-sound'
-
+import useSound from "vue-use-sound";
 
 const user = ref(auth.currentUser);
 const { msgs, error } = useShowMessages("chatMessages", "createdAt");
 const chatWindow = ref(null);
 
 onUpdated(() => {
-  chatWindow.value.scrollTop = chatWindow.value.scrollHeight;
+  if (chatWindow.value != null) {
+    chatWindow.value.scrollTop = chatWindow.value.scrollHeight;
+  }
 });
 
-
-
-const formatedMsgs = computed(()=>{
-  return msgs.value.map(msg => {
-    let time = formatDistanceToNow(msg.createdAt.toDate(), { addSuffix : true })
-    return { ...msg, createdAt : time}
-  })
-})
-
-
+const formatedMsgs = computed(() => {
+  return msgs.value.map((msg) => {
+    let time = msg.createdAt.toDate();
+    time = formatDistanceToNow(time, { addSuffix : true })
+    return { ...msg, createdAt: time };
+  });
+});
 </script>
 
 <style scoped>
@@ -72,6 +70,7 @@ const formatedMsgs = computed(()=>{
 .m-name,
 .o-name {
   display: block;
+  text-transform: capitalize;
 }
 
 .m-name {
@@ -93,7 +92,7 @@ const formatedMsgs = computed(()=>{
   background-color: rgb(122, 240, 201);
   border-radius: 2rem;
   position: relative;
-  color: #fff;
+  color: #000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -118,7 +117,7 @@ const formatedMsgs = computed(()=>{
   background-color: rgba(0, 0, 0);
   border-radius: 2rem;
   position: relative;
-  color: #fff;
+  color: #7af0c9;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -135,7 +134,7 @@ const formatedMsgs = computed(()=>{
 
 .msgTime,
 .o-name,
-.m-name{
+.m-name {
   font-size: 1.2rem;
   font-weight: 800;
   font-style: italic;

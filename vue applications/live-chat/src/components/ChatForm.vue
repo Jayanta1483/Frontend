@@ -1,7 +1,7 @@
 <template>
   <form action="" class="chat-form" @submit.prevent="sendMsg"> 
-      <textarea name="" id="" v-model="userMessage" required></textarea>
-      <button class="msgSub material-icons" type="submit" >send</button>
+      <textarea name="" class="chat-text" v-model="userMessage" required></textarea>
+      <button class="msgSub material-icons"  >send</button>
   </form>
 </template>
 

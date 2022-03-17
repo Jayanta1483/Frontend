@@ -5,6 +5,10 @@ import { auth } from "./firebase/config.js"
 import { onAuthStateChanged } from "firebase/auth"
 import './css/main.css'
 
+
+// To check if the connection to firebase backend is synchronised or not
+// waiting for the authentication initialization, then creating app
+
 let app;
 
 onAuthStateChanged(auth, ()=>{

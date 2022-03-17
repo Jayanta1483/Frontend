@@ -9,14 +9,16 @@ export const useShowMessages = (_collection, _orderby) => {
     const msgs = ref([])
     const error = ref(null)
 
-   const unsubscribe =  onSnapshot(q, (querySnapshot) => {
+     const unsubscribe = onSnapshot(q, (querySnapshot) => {
         let docs = []
         querySnapshot.forEach(doc => {
-            docs.push({...doc.data()})
+            let data = doc.data({ serverTimestamps : 'estimate'})
+            docs.push({...data})
         })
         console.log(querySnapshot)
         msgs.value = docs
         error.value = null
+       
     }, (err) => {
         error.value = err.message
     })

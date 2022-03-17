@@ -56,7 +56,9 @@ picture {
   display: block;
 }
 
-
+textarea{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
 
 
 
@@ -79,4 +81,27 @@ div.dark{
   top: -80px;
   right: -180px;
 
+}
+
+.load-text{
+  position: absolute;
+  left: 46%;top: 42%;
+  font-size: 1.8rem;
+}
+
+.loader{
+  position: absolute;
+  left: 43%;top: 35%;
+  width: 15rem;
+  height: 15rem;
+  border: 12px solid #99f0d3;
+  border-bottom: 12px solid black;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8rem;
+  animation: spinner 2.5s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotateZ(360deg);}
 }

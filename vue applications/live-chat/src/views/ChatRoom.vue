@@ -1,17 +1,11 @@
 <template>
   <div class="chat-room">
-    <div class="chat-window">
-      <transition name="msg-fade" appear>
-      <div>
+    <div class="chat-window-container">
+      
         <ChatWindow />
-        
-      </div>
-      </transition>
-      <transition name="msg-fade" appear>
       <div>
         <ChatForm />
       </div>
-      </transition>
     </div>
     <transition name="msg-fade" appear>
     <div class="panel">
